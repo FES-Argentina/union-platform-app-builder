@@ -1,0 +1,28 @@
+{
+  "name": "com.unionplatform.test",
+  "displayName": "Union Platform",
+  "version": "1.0.0",
+  "description": "Plataforma open-source para sindicatos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "emulate": "ANDROID_SDK_ROOT=/home/luzero/Android/Sdk JAVA_HOME=/usr/lib/jvm/jdk-11 cordova run --emulate",
+    "build": "ANDROID_SDK_ROOT=/home/luzero/Android/Sdk JAVA_HOME=/usr/lib/jvm/jdk-11 cordova build android --release -- --packageType=bundle"
+  },
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "author": "FUNDACIÓN FRIEDRICH EBERT",
+  "license": "Apache-2.0",
+  "cordova": {
+    "platforms": [
+      "android"
+    ]
+  },
+  "dependencies": {
+    "dotenv": "^16.0.0"
+  },
+  "devDependencies": {
+    "cordova-android": "^10.1.1"
+  }
+}
