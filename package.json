@@ -6,8 +6,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "emulate": "ANDROID_SDK_ROOT=/home/luzero/Android/Sdk JAVA_HOME=/usr/lib/jvm/jdk-11 cordova run --emulate",
-    "build": "ANDROID_SDK_ROOT=/home/luzero/Android/Sdk JAVA_HOME=/usr/lib/jvm/jdk-11 cordova build android --release -- --packageType=bundle"
+    "emulate": "env-cmd cordova run --emulate",
+    "build-debug": "env-cmd cordova build android",
+    "build-release": "env-cmd cordova build android --release -- --packageType=bundle",
+    "build-release-signed": "env-cmd cordova build android --release"
   },
   "keywords": [
     "ecosystem:cordova"
@@ -20,7 +22,8 @@
     ]
   },
   "dependencies": {
-    "dotenv": "^16.0.0"
+    "dotenv": "^16.0.0",
+    "env-cmd": "^10.1.0"
   },
   "devDependencies": {
     "cordova-android": "^10.1.1"
